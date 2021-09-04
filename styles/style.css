@@ -1,0 +1,132 @@
+:root {
+    --bg-primary: #261C2C;
+    --bg-secondary: #3E2C41;
+    --bg-secondary-variant: #5C527F;
+    --bg-tertiary: #6E85B2;
+    --text-primary: #ebf2fa;
+    --text-secondary: #faff7f;
+    line-height: 1.5;
+    font-size: 16;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-weight: 700;
+    padding: 50px;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary-variant);
+    border-bottom: .1em solid var(--text-primary);
+}
+
+.main {
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 8rem;
+    flex-shrink: 1;
+}
+
+.button {
+    padding: 15px;
+    border: .2rem solid var(--text-primary);
+    border-radius: 10px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: opacity 300ms ;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.fa-hand-rock {
+    height: 12rem;
+}
+
+.fa-hand-paper {
+    height: 12rem;
+
+}
+
+.fa-hand-scissors {
+    height: 12rem;
+}
+
+.score-board {
+    padding: 10px;
+    margin-top: 8rem;
+    font-size: 2em;
+}
+
+.score-info {
+    font-size: 2.6em;
+    font-weight: 600;
+}
+
+.scores-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 500;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        font-size: 0.7em;
+    }
+
+    .fa-hand-rock {
+        height: 6rem;
+    }
+
+    .fa-hand-paper {
+        height: 6rem;
+    }
+
+    .fa-hand-scissors {
+        height: 6rem;
+    }
+
+    .button-group {
+        margin-top: 4rem;
+    }
+
+    .score-board {
+        margin-top: 4rem;
+    }
+}
