@@ -76,6 +76,7 @@ function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+// Add event listeners to buttons 
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorButton = document.getElementById("scissors");
