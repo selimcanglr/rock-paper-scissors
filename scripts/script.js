@@ -23,8 +23,9 @@ function playRound(playerMove, computerMove) {
         }
     if (computerMove === "rock" && playerMove === "scissors"
         || computerMove === "paper" && playerMove === "rock"
-        || computerMove === "scissors" && playerMove === "paper")
-
+        || computerMove === "scissors" && playerMove === "paper") {
+            computerScore++;
+        }
 }
 
 function handleClick(playerMove) {
@@ -38,11 +39,14 @@ function handleClick(playerMove) {
 }
 
 function updateScores() {
-
+    playerScoreInfo.innerHTML = `Player: ${playerScore}`;
+    computerScoreInfo.innerHTML = `Computer: ${computerScore}`;
 }
 
-document.getElementById("rock").addEventListener("click", playRound("rock"));
-document.getElementById("paper").addEventListener("click", playRound("paper"));
-document.getElementById("scissors").addEventListener("click", playRound("scissors"));
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorButton = document.getElementById("scissors");
 
-
+rockButton.addEventListener("click", () => handleClick("rock"));
+paperButton.addEventListener("click", () =>  handleClick("paper"));
+scissorButton.addEventListener("click", () =>  handleClick("scissors"));
