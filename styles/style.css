@@ -51,12 +51,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: 8rem;
+    margin-top: 12rem;
     flex-shrink: 1;
 }
 
 .button {
-    padding: 15px;
+    padding: 2rem;
     border: .25rem solid var(--text-primary);
     border-radius: 20px;
     background-color: var(--bg-secondary);
@@ -70,16 +70,16 @@ body {
 }
 
 .fa-hand-rock {
-    height: 12rem;
+    font-size: 12rem;
 }
 
 .fa-hand-paper {
-    height: 12rem;
+    font-size: 12rem;
 
 }
 
 .fa-hand-scissors {
-    height: 12rem;
+    font-size: 12rem;
 }
 
 .score-board {
@@ -130,7 +130,6 @@ body {
         margin-top: 5rem;
     }
 }
-
 
 @media only screen and (min-width: 992px) {
     body {

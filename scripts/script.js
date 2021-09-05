@@ -1,7 +1,7 @@
 const MOVES = ["rock", "paper", "scissors"]
-const playerScoreInfo = document.getElementById("playerScore");
-const computerScoreInfo = document.getElementById("computerScore");
-const scoreboardInfo = document.getElementById("scoreInfo");
+const PLAYER_SCORE_INFO = document.getElementById("playerScore");
+const COMPUTER_SCORE_INFO = document.getElementById("computerScore");
+const SCOREBOARD_INFO = document.getElementById("scoreInfo");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -57,19 +57,19 @@ function handleClick(playerMove) {
 }
 
 function updateScores() {
-    playerScoreInfo.innerHTML = `Player: ${playerScore}`;
-    computerScoreInfo.innerHTML = `Computer: ${computerScore}`;
+    PLAYER_SCORE_INFO.innerHTML = `Player: ${playerScore}`;
+    COMPUTER_SCORE_INFO.innerHTML = `Computer: ${computerScore}`;
 }
 
 function updateWinnerFeedback(winner) {
     if (winner === "player") {
-        scoreboardInfo.innerHTML = `You Won! ${winnerMove} beats ${loserMove}`;
+        SCOREBOARD_INFO.innerHTML = `You Won! ${winnerMove} beats ${loserMove}`;
     }
     else if (winner === "computer") {
-        scoreboardInfo.innerHTML = `You Lost! ${loserMove} gets beaten by ${winnerMove}`;
+        SCOREBOARD_INFO.innerHTML = `You Lost! ${loserMove} gets beaten by ${winnerMove}`;
     }
     else {
-        scoreboardInfo.innerHTML = "It's a Draw!";
+        SCOREBOARD_INFO.innerHTML = "It's a Draw!";
     }
 }
 
@@ -78,7 +78,12 @@ function capitalize(string) {
 }
 
 function updateMoveVisuals(playerMove, computerMove) {
+    // Why the hack is playerIcon null??????
+    const playerIcon = document.getElementById("playerIcon");
+    const computerIcon = document.getElementById("computerIcon");
 
+    playerIcon.classList = `far fa-hand-${playerMove} active`;
+    computerIcon.classList = `far fa-hand-${computerMove} active`;
 }
 
 // Add event listeners to buttons 
