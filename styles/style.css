@@ -57,8 +57,8 @@ body {
 
 .button {
     padding: 15px;
-    border: .2rem solid var(--text-primary);
-    border-radius: 10px;
+    border: .25rem solid var(--text-primary);
+    border-radius: 20px;
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     cursor: pointer;
@@ -104,6 +104,33 @@ body {
     max-width: 600px;
     margin: 0 auto;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 0.4em;
+    }
+
+    .fa-hand-rock {
+        height: 5rem;
+    }
+
+    .fa-hand-paper {
+        height: 5rem;
+    }
+
+    .fa-hand-scissors {
+        height: 5rem;
+    }
+
+    .button-group {
+        margin-top: 5rem;
+    }
+
+    .score-board {
+        margin-top: 5rem;
+    }
+}
+
 
 @media only screen and (min-width: 992px) {
     body {

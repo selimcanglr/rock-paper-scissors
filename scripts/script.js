@@ -41,7 +41,6 @@ function playRound(playerMove, computerMove) {
     else {
         winner = "draw";
     }
-
 }
 
 function handleClick(playerMove) {
@@ -50,9 +49,11 @@ function handleClick(playerMove) {
     }
 
     let computerMove = computerPlay();
+
     playRound(playerMove, computerMove);
     updateScores();
     updateWinnerFeedback(winner);
+    updateMoveVisuals(playerMove, computerMove);
 }
 
 function updateScores() {
@@ -74,6 +75,10 @@ function updateWinnerFeedback(winner) {
 
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function updateMoveVisuals(playerMove, computerMove) {
+
 }
 
 // Add event listeners to buttons 
